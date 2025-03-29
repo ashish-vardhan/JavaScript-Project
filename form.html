@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Form with Alert</title>
+</head>
+<body>
+    <form id="exampleForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        
+        const form = document.getElementById("exampleForm");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault(); 
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            
+            alert(`Form submitted!\nUsername: ${username}\nPassword: ${password}`);
+        });
+    </script>
+</body>
+</html>
